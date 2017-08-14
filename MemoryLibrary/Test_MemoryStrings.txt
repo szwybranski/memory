@@ -1,0 +1,5 @@
+1.This is first memory string
+2.This is second memory string 
+which have more than one single line
+44.05 44.55 - are numbers that won't break during loading time
+3. This point starts with space at the beginning of the line.

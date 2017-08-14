@@ -1,0 +1,27 @@
+Idea: Reminds you about things worth remembering.
+You have to create files which contains important stuff for you in numbered sentences. Each point starts with number and ".", they have to be seqenced.
+There is one configuration file which describes from which files (called MemoryFiles) you would like to learn, that enables you to exchange MemoryFiles with your teammates.
+To guide program you can grade memory strings, so that it will remind you more often about stuff you didn't yet remember, and not repeating once that you remember good.
+
+you can add lines to MemoryFile anytime
+you can lose conf files, they are generated if you lose them
+warn if some file is corrupted
+warn if you mastered all
+
+
+internal details:
+1.Read configuration file, foreach file
+	-check if size have changed if yes then calc new average grade for file
+	-calc which file to pick (sum avg, reverse x-sumavg+1, sum again, rand.next(0, sumagain), walk and -, if <=0 then pick)
+	-read memory strings and read grades for these memory strings
+	-calc which memory string to pick  (sum avg, reverse x-sumavg+1, sum again, rand.next(0, sumagain), walk and -, if <=0 then pick) 
+	-display
+	-if(grade) then save new grade for file hold up to y in history
+	
+	
+***stats
+-display progress bars for each file
+-display graph for memory string
+
+
+At the moment program supports only 1 grade for each memorystring, and 1 avggrade for each file
